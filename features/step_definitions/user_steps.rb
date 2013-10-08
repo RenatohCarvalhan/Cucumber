@@ -24,3 +24,7 @@ Given /^Edit account for (.+) with (.+) and (.+)$/ do |email, password, current_
   step "I fill in \"user_current_password\" with \"#{current_password}\""
   step "I press \"Update\"" 
 end
+
+Then /^I wait "(.+)" seconds$/ do |seconds|
+  sleep seconds.to_i
+end

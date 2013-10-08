@@ -27,8 +27,10 @@ group :development, :test do
   gem 'rspec'
   gem 'webrat'
   gem "rspec-rails", ">= 2.0.1"
+  gem 'cucumber'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
 
 # To use ActiveModel has_secure_password

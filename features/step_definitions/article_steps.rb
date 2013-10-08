@@ -20,3 +20,7 @@ end
 Then /^I should see "([^\"]*)", "([^\"]*)"$/ do |text, context|
   page.should have_content(text, context)
 end
+
+When /^I follow link for "(.+)"$/ do |link|
+  click_link(link)
+end

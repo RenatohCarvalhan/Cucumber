@@ -27,4 +27,15 @@ Scenario: Edit Article
   Then I should see "Batman", "I'm Batman"
   And I should see "Robin", "I'm Robin"
   And I should see "Edit"
-  #And I follow "Edit"
+  And I follow link for "edit_1"
+  And I fill in "Title" with "Robin"
+  And I fill in "Context" with "I'm Robin"
+  And I press "Update Article"
+
+Scenario: Delete Article
+  Given I have articles titled Batman, Robin and with context I'm Batman, I'm Robin
+  When I go to the list of articles
+  Then I should see "Batman", "I'm Batman"
+  And I should see "Robin", "I'm Robin"
+  And I should see "Destroy"
+  And I follow link for "delete_1"

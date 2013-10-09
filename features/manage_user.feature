@@ -34,7 +34,7 @@ Scenario: Delete User
   And I am logged renato@user.com with 12345678
   When I go to the list users
   Then I should see "Destroy"
-  And I follow link for "delete_1"
+  And I press link for "delete_1"
 
 Scenario: Login and Logout
   Given I am a new, authenticated user

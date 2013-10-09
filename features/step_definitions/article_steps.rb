@@ -24,3 +24,8 @@ end
 When /^I follow link for "(.+)"$/ do |link|
   click_link(link)
 end
+
+When /^I press link for "(.+)"$/ do |link|
+  click_link(link)
+  page.driver.browser.switch_to.alert.accept
+end

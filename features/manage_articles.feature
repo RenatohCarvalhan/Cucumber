@@ -38,4 +38,4 @@ Scenario: Delete Article
   Then I should see "Batman", "I'm Batman"
   And I should see "Robin", "I'm Robin"
   And I should see "Destroy"
-  And I follow link for "delete_1"
+  And I press link for "delete_1"

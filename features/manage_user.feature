@@ -29,6 +29,7 @@ Scenario: Edit User
   And I fill in "Current password" with "12345678"
   And I press "Update"
 
+@javascript
 Scenario: Delete User
   Given I am a new, authenticated user
   And I am logged renato@user.com with 12345678

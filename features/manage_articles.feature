@@ -32,6 +32,7 @@ Scenario: Edit Article
   And I fill in "Context" with "I'm Robin"
   And I press "Update Article"
 
+@javascript
 Scenario: Delete Article
   Given I have articles titled Batman, Robin and with context I'm Batman, I'm Robin
   When I go to the list of articles

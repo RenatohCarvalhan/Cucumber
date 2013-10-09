@@ -27,5 +27,12 @@ end
 
 When /^I press link for "(.+)"$/ do |link|
   click_link(link)
+end
+
+Then /^I should not see "([^\"]*)", "([^\"]*)"$/ do |text, context|
+  response.should_not have_content(text, context)
+end
+
+When /^I should see javascript and press ok$/ do
   page.driver.browser.switch_to.alert.accept
 end

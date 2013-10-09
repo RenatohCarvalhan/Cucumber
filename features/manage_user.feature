@@ -35,7 +35,9 @@ Scenario: Delete User
   And I am logged renato@user.com with 12345678
   When I go to the list users
   Then I should see "Destroy"
-  And I press link for "delete_1"
+  And I follow "delete_1"
+  And I should see javascript and press ok
+  And I should not see "renato@user.com"
 
 Scenario: Login and Logout
   Given I am a new, authenticated user

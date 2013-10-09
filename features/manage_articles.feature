@@ -34,9 +34,12 @@ Scenario: Edit Article
 
 @javascript
 Scenario: Delete Article
-  Given I have articles titled Batman, Robin and with context I'm Batman, I'm Robin
+  Given I have articles titled Batman and with context I'm Batman
+  And I have articles titled Robin and with context I'm Robin
   When I go to the list of articles
   Then I should see "Batman", "I'm Batman"
-  And I should see "Robin", "I'm Robin"
   And I should see "Destroy"
-  And I press link for "delete_1"
+  And I follow "delete_1"
+  And I should see javascript and press ok
+  Then I should see "Robin", "I'm Robin"
+  And I should not see "Batman", "I'm Batman"
